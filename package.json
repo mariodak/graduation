@@ -1,0 +1,44 @@
+{
+  "name": "maturita",
+  "version": "1.0.0",
+  "description": "maturitny projekt 2018",
+  "main": "index.js",
+  "scripts": {
+    "watch": "gulp build-watch",
+    "server": "gulp browser-sync",
+    "start": "npm-run-all -p watch server",
+    "build": "gulp build"
+  },
+  "repository": "https://github.com/mariodak/maturita.git",
+  "keywords": [
+    "maturita",
+    "projekt",
+    "2018"
+  ],
+  "author": "Mario Dak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mariodak/maturita/issues"
+  },
+  "homepage": "https://github.com/mariodak/maturita#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-copy": "^1.0.1",
+    "gulp-css-copy-assets": "^0.0.4",
+    "gulp-logger": "^0.0.2",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}
