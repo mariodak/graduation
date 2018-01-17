@@ -10,7 +10,7 @@
         "*js": true,
         "yarn.lock": true,
         "README.md": true,
-        //"package.json": true,
+        "package.json": true,
         "node_modules": true,
         ".vscode": true,
 

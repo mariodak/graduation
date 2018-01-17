@@ -33,12 +33,14 @@
     "gulp-css-copy-assets": "^0.0.4",
     "gulp-logger": "^0.0.2",
     "gulp-pug": "^3.3.0",
+    "gulp-pug-beautify": "^0.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^1.0.0",
     "gulp-watch": "^4.3.11",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
+    "fullpage.js": "^2.9.5",
     "npm-run-all": "^4.1.2"
   }
 }

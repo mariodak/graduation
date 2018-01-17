@@ -4,8 +4,6 @@
 
 // # Plugins here #
 var gulp = require('gulp'),
-    gulpSequence = require('gulp-sequence').use(gulp),
-    runSequence = require('run-sequence'),
     glob = require('glob'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
@@ -56,7 +54,9 @@ gulp.task("build", function () {
 
     // Compile PUG
     gulp.src(pug_files)
-        .pipe(pug())
+        .pipe(pug({
+            pretty: true
+        }))
         .pipe(gulp.dest('dist'))
         .pipe(logger({
             before: 'Compiling PUG..',
@@ -115,7 +115,9 @@ gulp.task("build-watch", function () {
     // Compile PUG + Watch
     gulp.src(pug_files)
         .pipe(watch(pug_files))
-        .pipe(pug())
+        .pipe(pug({
+            pretty: true
+        }))
         .pipe(gulp.dest('dist'))
         .pipe(logger({
             before: 'Compiling PUG..',

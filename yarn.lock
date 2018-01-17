@@ -1215,6 +1215,13 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+dateformat@^1.0.11:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-1.0.12.tgz#9f124b67594c937ff706932e4a642cca8dbbfee9"
+  dependencies:
+    get-stdin "^4.0.1"
+    meow "^3.3.0"
+
 dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
@@ -1744,6 +1751,12 @@ fstream@^1.0.0, fstream@^1.0.10, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+fullpage.js@^2.9.5:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-2.9.5.tgz#420e149b87253ec6810319d1421975ea88b5dc00"
+  dependencies:
+    jquery ">=1.6.0"
+
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -1994,6 +2007,17 @@ gulp-logger@^0.0.2:
     rename "^0.2.3"
     through2 "^0.5.1"
 
+gulp-pug-beautify@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-pug-beautify/-/gulp-pug-beautify-0.0.1.tgz#5ca8e19f40c8c16cb31ce087e6d45ba43c493c86"
+  dependencies:
+    gulp "3.9.0"
+    gulp-util "3.0.7"
+    object-assign "4.0.1"
+    pug-beautify "0.1.1"
+    through2 "2.0.1"
+    vinyl "^1.1.1"
+
 gulp-pug@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/gulp-pug/-/gulp-pug-3.3.0.tgz#46982c1439c094c360542ed8ba5c882d3bb711cf"
@@ -2018,6 +2042,29 @@ gulp-sequence@^1.0.0:
   resolved "https://registry.yarnpkg.com/gulp-sequence/-/gulp-sequence-1.0.0.tgz#862f93e6503e67c350a42948fa666953cf88ba67"
   dependencies:
     thunks "^4.9.0"
+
+gulp-util@3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.7.tgz#78925c4b8f8b49005ac01a011c557e6218941cbb"
+  dependencies:
+    array-differ "^1.0.0"
+    array-uniq "^1.0.2"
+    beeper "^1.0.0"
+    chalk "^1.0.0"
+    dateformat "^1.0.11"
+    fancy-log "^1.1.0"
+    gulplog "^1.0.0"
+    has-gulplog "^0.1.0"
+    lodash._reescape "^3.0.0"
+    lodash._reevaluate "^3.0.0"
+    lodash._reinterpolate "^3.0.0"
+    lodash.template "^3.0.0"
+    minimist "^1.1.0"
+    multipipe "^0.1.2"
+    object-assign "^3.0.0"
+    replace-ext "0.0.1"
+    through2 "^2.0.0"
+    vinyl "^0.5.0"
 
 gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.2, gulp-util@^3.0.7:
   version "3.0.8"
@@ -2056,6 +2103,24 @@ gulp-watch@^4.3.11:
     slash "^1.0.0"
     vinyl "^1.2.0"
     vinyl-file "^2.0.0"
+
+gulp@3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/gulp/-/gulp-3.9.0.tgz#cf1fba4cb558bb8c6ae6c9613f583ae2620d214a"
+  dependencies:
+    archy "^1.0.0"
+    chalk "^1.0.0"
+    deprecated "^0.0.1"
+    gulp-util "^3.0.0"
+    interpret "^0.6.2"
+    liftoff "^2.1.0"
+    minimist "^1.1.0"
+    orchestrator "^0.3.0"
+    pretty-hrtime "^1.0.0"
+    semver "^4.1.0"
+    tildify "^1.0.0"
+    v8flags "^2.0.2"
+    vinyl-fs "^0.3.0"
 
 gulp@^3.9.1:
   version "3.9.1"
@@ -2300,6 +2365,10 @@ inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@~2.0.0, inherits@~2.0.1, i
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+
+interpret@^0.6.2:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/interpret/-/interpret-0.6.6.tgz#fecd7a18e7ce5ca6abfb953e1f86213a49f1625b"
 
 interpret@^1.0.0:
   version "1.1.0"
@@ -2574,6 +2643,10 @@ isobject@^3.0.0, isobject@^3.0.1:
 isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+
+jquery@>=1.6.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 js-base64@^2.1.8:
   version "2.4.0"
@@ -2913,7 +2986,7 @@ memorystream@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/memorystream/-/memorystream-0.3.1.tgz#86d7090b30ce455d63fbae12dda51a47ddcaf9b2"
 
-meow@^3.7.0:
+meow@^3.3.0, meow@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/meow/-/meow-3.7.0.tgz#72cb668b425228290abbfa856892587308a801fb"
   dependencies:
@@ -3192,6 +3265,10 @@ number-is-nan@^1.0.0:
 oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
+
+object-assign@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.0.1.tgz#99504456c3598b5cad4fc59c26e8a9bb107fe0bd"
 
 object-assign@^3.0.0:
   version "3.0.0"
@@ -3519,6 +3596,10 @@ pug-attrs@^2.0.2:
     js-stringify "^1.0.1"
     pug-runtime "^2.0.3"
 
+pug-beautify@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/pug-beautify/-/pug-beautify-0.1.1.tgz#df7fbc70ee80c18a6422dffab2fe508188cdcc18"
+
 pug-code-gen@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pug-code-gen/-/pug-code-gen-2.0.0.tgz#96aea39a9e62f1ec5d2b6a5b42a29d528c70b43d"
@@ -3696,6 +3777,17 @@ readable-stream@~1.1.9:
     inherits "~2.0.1"
     isarray "0.0.1"
     string_decoder "~0.10.x"
+
+readable-stream@~2.0.0:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.0.6.tgz#8f90341e68a53ccc928788dacfcd11b36eb9b78e"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "~1.0.0"
+    process-nextick-args "~1.0.6"
+    string_decoder "~0.10.x"
+    util-deprecate "~1.0.1"
 
 readdirp@^2.0.0:
   version "2.1.0"
@@ -4400,6 +4492,13 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
+through2@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.1.tgz#384e75314d49f32de12eebb8136b8eb6b5d59da9"
+  dependencies:
+    readable-stream "~2.0.0"
+    xtend "~4.0.0"
+
 through2@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.5.1.tgz#dfdd012eb9c700e2323fd334f38ac622ab372da7"
@@ -4661,7 +4760,7 @@ vinyl@^0.5.0:
     clone-stats "^0.0.1"
     replace-ext "0.0.1"
 
-vinyl@^1.1.0, vinyl@^1.2.0:
+vinyl@^1.1.0, vinyl@^1.1.1, vinyl@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/vinyl/-/vinyl-1.2.0.tgz#5c88036cf565e5df05558bfc911f8656df218884"
   dependencies:
@@ -4735,7 +4834,7 @@ xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
 
-"xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.1:
+"xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
