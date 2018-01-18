@@ -30,12 +30,5 @@ function scrollAnimation(){
       })
 
 }
-scrollAnimation()
-$(window).scroll(scrollAnimation);
-
 
 // scroll
-
-$(document).ready(function () {
-    $('#demo').betterScroll();
-});
