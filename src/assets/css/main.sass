@@ -2,6 +2,7 @@
 @charset "UTF-8"
 @import '../lib/_menu.sass'
 
+//src: url('../fonts/DryBrush.ttf') format("truetype")
 
 @font-face
   src: url('../fonts/DryBrush.ttf') format("truetype")
@@ -72,6 +73,71 @@ body
 *
     box-sizing: border-box
 
+
+// Menu
+
+.active
+    color: green
+    font-size: 30px
+    background-color: red
+.menu
+    width: 100%
+    height: 200px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    background: white
+    top: 0
+    left: 0
+    z-index: 999
+    .container
+        width: 100%
+        margin: 100px auto
+    .progressbar
+        counter-reset: step
+        li
+            list-style-type: none
+            width: 10%
+            float: left
+            font-size: 12px
+            position: relative
+            text-align: center
+            text-transform: uppercase
+            color: #7d7d7d
+            &:before
+                width: 30px
+                height: 30px
+                content: counter(step)
+                counter-increment: step
+                line-height: 30px
+                border: 2px solid #7d7d7d
+                display: block
+                text-align: center
+                margin: 0 auto 10px auto
+                border-radius: 50%
+                background-color: white
+            &:after
+                width: 100%
+                height: 2px
+                content: ''
+                position: absolute
+                background-color: #7d7d7d
+                top: 15px
+                left: -50%
+                z-index: -1
+            &:first-child:after
+                content: none
+            &.active
+                color: green
+                &:before
+                    border-color: #55b776
+                + li:after
+                    background-color: #55b776
+
+
+
+// End Menu
 .line-container
     width: 90%
     height: 400px

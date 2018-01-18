@@ -9,8 +9,22 @@
     <link href="assets/css/main.css" rel="stylesheet">
   </head>
   <body>
+    <!-- Menu-->
+    <div class="menu">
+      <div class="container">
+        <ul class="progressbar">
+          <li class="active"><a href="#home">Domov</a></li>
+          <li><a href="#use">Gear</a></li>
+          <li><a href="#gallery">Fotografie</a></li>
+          <li><a href="#edit">Úprava</a></li>
+          <li><a href="#lightroom">Lightroom</a></li>
+          <li><a href="#about">O mne</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
     <!-- Start-->
-    <header><span class="name">Mário Ďak</span><span class="type">photography</span>
+    <header id="home"><span class="name">Mário Ďak</span><span class="type">photography</span>
       <div class="icon"></div>
     </header>
     <div class="line-container">
@@ -19,7 +33,7 @@
     <div class="title-container">
       <p>Čo používam?</p>
     </div>
-    <div class="a-container">
+    <div class="a-container" id="use">
       <div class="container">
         <div class="image-container"><img alt="neexistuje" src="assets/img/canon_dslr.png"></div>
         <div class="info-container"><span class="title">Canon<span class="model">100D</span></span><br><span class="info">- CMOS 18Mpx DIGIC5<br>- 3" LCD<br>- FHD video</span></div>
@@ -39,7 +53,7 @@
     <div class="title-container">
       <p>Fotografia</p>
     </div>
-    <div class="b-container">
+    <div class="b-container" id="gallery">
       <div class="row">
         <div class="column"><img src="assets/img/fotky/cropped-image-1.jpg"><img src="assets/img/fotky/cropped-image-1.jpg"><img src="assets/img/fotky/cropped-image-2.jpg"></div>
         <div class="column"><img src="assets/img/fotky/cropped-image-2.jpg"><img src="assets/img/fotky/cropped-image-1.jpg"><img src="assets/img/fotky/cropped-image-2.jpg"></div>
@@ -52,7 +66,7 @@
     <div class="title-container">
       <p>Postprodukcia</p>
     </div>
-    <div class="c-container">
+    <div class="c-container" id="edit">
       <div class="container-bg"></div>
       <div class="container-image"><img alt="neexistuje" src="assets/img/macbook-edit.png"></div>
     </div>
@@ -62,7 +76,7 @@
     <div class="title-container">
       <p>Úprava fotiek?</p>
     </div>
-    <div class="d-container">
+    <div class="d-container" id="lightroom">
       <div class="container-image">
         <div class="flex-container">
           <div class="flex-item">
@@ -90,7 +104,7 @@
     <div class="title-container">
       <p>Kto som?</p>
     </div>
-    <div class="e-container">
+    <div class="e-container" id="about">
       <div class="container-image"><img alt="neexistuje" src="assets/img/profile.jpg"></div>
       <div class="container-text">
         <p>- Moje meno je Mário Ďak.<br>- Mám 19r.<br>- Som študent na SOS Technickej, Humenné.<br>- Zaoberám sa tvorbou webov a fotografií.<br>- Odborne sa venujem dizajnu.<br></p>
@@ -102,7 +116,7 @@
     <div class="title-container">
       <p>Kontaktuj ma</p>
     </div>
-    <footer>
+    <footer id="contact">
       <div class="container">
         <div class="email"><a href="mailto:e.mariodak@gmail.com">e.mariodak@gmail.com</a></div>
         <div class="social"><a target="_blank" href="https://www.instagram.com/ofmarioo">

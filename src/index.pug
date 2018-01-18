@@ -8,9 +8,32 @@ html(lang="sk")
         link(rel='shortcut icon' type='image/x-icon' href='favicon.ico')
         link(href="assets/css/main.css", rel="stylesheet")
     body
+        // Menu
+        .menu
+            .container
+                ul.progressbar
+                    li.active
+                        a(href="#home") Domov
+                    li
+                        a(href="#use") Gear
+                    li
+                        a(href="#gallery") Fotografie
+                    li
+                        a(href="#edit") Úprava
+                    li
+                        a(href="#lightroom") Lightroom
+                    li
+                        a(href="#about") O mne
+                    li
+                        a(href="#contact") Kontakt
+                    
+                    
+
+
+
 
         // Start
-        header
+        header#home
             span.name Mário Ďak
             span.type photography
             .icon
@@ -18,7 +41,7 @@ html(lang="sk")
             .line
         .title-container
             p Čo používam?
-        .a-container
+        .a-container#use
             .container
                 .image-container
                     img(alt="neexistuje" src="assets/img/canon_dslr.png")
@@ -75,7 +98,7 @@ html(lang="sk")
             .line
         .title-container
             p Fotografia
-        .b-container
+        .b-container#gallery
             .row
                 .column
                     img(src="assets/img/fotky/cropped-image-1.jpg")
@@ -93,7 +116,7 @@ html(lang="sk")
             .line
         .title-container
             p Postprodukcia
-        .c-container
+        .c-container#edit
             .container-bg
             .container-image
                 img(alt="neexistuje" src="assets/img/macbook-edit.png")
@@ -101,7 +124,7 @@ html(lang="sk")
             .line
         .title-container
             p Úprava fotiek?
-        .d-container
+        .d-container#lightroom
             .container-image
                 .flex-container
                     .flex-item
@@ -124,7 +147,7 @@ html(lang="sk")
             .line
         .title-container
             p Kto som?
-        .e-container
+        .e-container#about
             .container-image
                 img(alt="neexistuje" src="assets/img/profile.jpg")
             .container-text
@@ -143,7 +166,7 @@ html(lang="sk")
             .line
         .title-container
             p Kontaktuj ma
-        footer
+        footer#contact
             .container
                 .email
                     a(href="mailto:e.mariodak@gmail.com") e.mariodak@gmail.com
