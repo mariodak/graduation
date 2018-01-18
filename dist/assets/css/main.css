@@ -1,5 +1,5 @@
 @font-face {
-  src: url("/graduation/dist/assets/fonts/DryBrush.ttf") format("truetype");
+  src: url("../fonts/DryBrush.ttf") format("truetype");
   font-family: DryBrush;
   font-weight: 400;
   font-style: regular; }
