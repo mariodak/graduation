@@ -5,25 +5,41 @@
   src: url('/assets/fonts/DryBrush.ttf')
   font-family: DryBrush
   font-weight: 400
-  font-style: normal
+  font-style: regular
+
+@font-face
+  src: url('/assets/fonts/PT_Sans-Web-Regular.ttf')
+  font-family: pt-sans
+  font-weight: 400
+  font-style: regular
+
+@font-face
+  src: url('/assets/fonts/PT_Sans-Web-Italic.ttf')
+  font-family: pt-sans
+  font-weight: 400
+  font-style: italic
 
 li
     list-style: none
 a
     text-decoration: none
 
+::selection
+    background: rgba(40, 58, 90, 0.1)
 //  variables settings   //
 $apply: all 0.3s ease-in // Animation
 
 // Colors
 $line: #f8f8f8 // Space lines between
-$title: #aaaaaa // Section title
+$title: #272829 // Section title
+$hr: #aaaaaa    // line
+$text: #696969 // Section title
 $menu: #395a6e // Active menu button
 $background: #f8f8f8 // background of body
 
 // Fonts
 $f-title: "DryBrush"
-$f-other: "Courgette"
+$f-other: "pt-sans"
 
 
 
@@ -34,26 +50,28 @@ body
     margin: 0
     padding: 0
     background-color: $background
+    color: $text
+    font-family: $f-other
+    font-size: 18px
 
 *
-    border-box: box-sizing
+    box-sizing: border-box
 
 .line-container
     width: 90%
     height: 400px
-    margin: auto
-    //background: rgba(255, 0, 0, .2)
+    margin: 150px auto
+    //backgrodnd: rgba(255, 0, 0, .2)
     display: flex
     justify-content: center
     align-items: center
-    padding: 80px 0
     .line
-        border-left: 1px solid $title
+        border-left: 1px solid $hr
         height: 100%
 .title-container
     width: 90%
     height: 200px
-    margin: auto
+    margin: -60px auto 50px auto
     //background: rgba(0,225,0, .2)
     font-family: $f-title
     font-size: 7em
@@ -61,17 +79,20 @@ body
     justify-content: center
     align-items: center
     color: $title
-    padding: 30px 0
     .rotate-font
         transform: rotate(-10deg)
+        margin: 0px auto 0 auto
 header
     width: 100%
     height: 100vh
-    background: gray
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
+    background:
+        image: url('../img/bg-header.jpg')
+        repeat: no-repeat
+        size: cover
     .name, .type
         font-family: $f-title
         color: $background
@@ -81,18 +102,197 @@ header
     .type
         font-size: 3em
         align: center
-section
-    width: 90%
-    min-height: 100px
-    background: gray
+    .icon
+        bottom: 10%
+        transform: translateY(-10%)
+        position: absolute
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 50px 30px 0 30px
+        border-color: #ffffff transparent transparent transparent
+        line-height: 0px
+        transform-origin: 50% 50%
+        animation: icon-tap 1.5s infinite
+        _border-color: #ffffff #000000 #000000 #000000
+        _filter: progid:DXImageTransform.Microsoft.Chroma(color='#ffffff')
+
+
+@keyframes icon-tap
+    0%
+        transform: translateY(0px)
+        opacity: 100
+    100%
+        transform: translateY(20px)
+        opacity: 0
+    
+.a-container, .b-container, .c-container, .d-container, .e-container
+    width: 80%
+    min-height: 200px
+    //background: gray
     margin: auto
-    .a-container
-    .b-container
-    .c-container
-    .d-container
-    .e-container
+.a-container
+    .image-container
+        width: 50%
+        min-height: 200px
+        float: left
+        display: flex
+        justify-content: flex-end
+        img
+            height: 200px
+            transform: rotate(15deg)
+    .info-container
+        width: 50%
+        min-height: 200px
+        float: left
+        padding: 0 50px
+        .title
+            font-size: 50px
+            font-weight: 600
+            .model
+                color: #283a5a
+                margin-left: 10px
+        .info
+            font-size: 26px
+.b-container
+    display: flex
+    flex-wrap: wrap
+    .row
+        display: flex
+        flex-wrap: wrap
+        padding: 0 4px
+    .column
+        flex: 25%
+        max-width: 25%
+        padding: 0 4px
+    .column img
+        margin-top: 8px
+        vertical-align: middle
+        width: 100%
+.c-container
+    .container-bg
+        width: 100%
+        height: 700px
+        background:
+            image: url('../img/bg-macbook.jpg')
+            size: cover
+            position: center center
+    .container-image
+        width: 75%
+        height: 500px
+        margin: -250px auto 0px auto
+        img
+            width: 100%
+.d-container
+    .container-image
+        width: 100%
+        min-height: 400px
+        .flex-container
+            width: 100%
+            min-height: 400px
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: flex-start
+            align-content: stretch
+            align-items: flex-start
+            .flex-item
+                border: 5px $background solid
+                height: 300px
+                &:nth-child(1)
+                    width: 70%
+                    order: 0
+                    flex: 2 1 auto
+                    align-self: auto
+                &:nth-child(2)
+                    width: 30%
+                    order: 0
+                    flex: 1 1 auto
+                    align-self: auto
+                &:nth-child(3)
+                    width: 30%
+                    order: 0
+                    flex: 1 1 auto
+                    align-self: auto
+                &:nth-child(4)
+                    width: 70%
+                    order: 0
+                    flex: 1 1 auto
+                    align-self: auto
+    .container-macs
+        width: 60%
+        height: 500px
+        margin: -200px auto 50px auto
+        img
+            width: 100%
+    .container-text
+        width: 30%
+        min-height: 100px
+        line-height: 30px
+        margin: auto
+        text-align: justify
+        text-align-last: center
+        
+
+.e-container
+    .container-image
+        width: 100%
+        height: 300px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 50px
+        img
+            height: 100%
+    .container-text
+        width: 100%
+        min-height: 100px
+        text-align: center
+        line-height: 40px
+        p
+            width: 100%
+            max-width: 500px
+            margin: auto
 footer
     width: 90%
     min-height: 100px
-    margin: auto
-    background: gray
+    margin: auto auto 100px auto
+    .container
+        width: 100%
+        max-width: 150px
+        height: 40px
+        margin: auto
+    .email
+        width: 100%
+        height: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+    .social
+        width: 100%
+        height: 20px
+        display: flex
+        margin-top: 70px
+        align-items: center
+        justify-content: space-between
+        a
+            .instagram
+                width: 40px
+                height: 40px
+                background-image: url('../icon/instagram.svg')
+            .facebook
+                width: 40px
+                height: 40px
+                background-image: url('../icon/facebook.svg')
+            .twitter
+                width: 40px
+                height: 40px
+                background-image: url('../icon/twitter.svg')
+            .instagram, .facebook, .twitter
+                filter: grayscale(100%)
+                transform: translateY(0px) rotateX(0deg)
+                transition: all .3s ease-in
+                &:hover
+                    filter: grayscale(0%)
+                    transform: translateY(-10px) rotateY(180deg)
+        
