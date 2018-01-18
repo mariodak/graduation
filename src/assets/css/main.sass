@@ -1,20 +1,24 @@
 // Hlavný štýlový dokument
+@charset "UTF-8"
 @import '../lib/_menu.sass'
 
+// host
+$path: '/graduation/dist/'
+// /graduation/dist
 @font-face
-  src: local('DryBrush'), url('/assets/fonts/DryBrush.ttf') format("truetype")
+  src: url('#{$path}assets/fonts/DryBrush.ttf') format("truetype")
   font-family: DryBrush
   font-weight: 400
   font-style: regular
 
 @font-face
-  src: local('pt-sans'), url('/assets/fonts/PT_Sans-Web-Regular.ttf') format("truetype")
+  src: url('/assets/fonts/PT_Sans-Web-Regular.ttf') format("truetype")
   font-family: pt-sans
   font-weight: 400
   font-style: regular
 
 @font-face
-  src: local('pt-sans-italic'), url('/assets/fonts/PT_Sans-Web-Italic.ttf') format("truetype")
+  src: url('/assets/fonts/PT_Sans-Web-Italic.ttf') format("truetype")
   font-family: pt-sans
   font-weight: 400
   font-style: italic
