@@ -899,6 +899,10 @@ browserslist@^2.1.2, browserslist@^2.11.1:
     caniuse-lite "^1.0.30000792"
     electron-to-chromium "^1.3.30"
 
+bs-fullscreen-message@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/bs-fullscreen-message/-/bs-fullscreen-message-1.1.0.tgz#9a479a6b9fdd46e1a67b4f37568b3d43d9f2777b"
+
 bs-recipes@1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/bs-recipes/-/bs-recipes-1.3.4.tgz#0d2d4d48a718c8c044769fdc4f89592dc8b69585"
@@ -1998,6 +2002,13 @@ gulp-css-copy-assets@^0.0.4:
     gulp-bufferify "^0.0.4"
     md5-file "^3.1.1"
 
+gulp-error-handle@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-error-handle/-/gulp-error-handle-1.0.0.tgz#93b2a156b820c35d4f8e46e98c5fd5a70dcee5f4"
+  dependencies:
+    gutil "1.6.4"
+    through2 "2.0.3"
+
 gulp-logger@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/gulp-logger/-/gulp-logger-0.0.2.tgz#0ec000bf91e8cae424305da0f9057af3158332b0"
@@ -2006,6 +2017,15 @@ gulp-logger@^0.0.2:
     gulp-util "^3.0.0"
     rename "^0.2.3"
     through2 "^0.5.1"
+
+gulp-plumber@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-plumber/-/gulp-plumber-1.2.0.tgz#18ea03912c9ee483f8a5499973b5954cd90f6ad8"
+  dependencies:
+    chalk "^1.1.3"
+    fancy-log "^1.3.2"
+    plugin-error "^0.1.2"
+    through2 "^2.0.3"
 
 gulp-pug-beautify@^0.0.1:
   version "0.0.1"
@@ -2145,6 +2165,12 @@ gulplog@^1.0.0:
   resolved "https://registry.yarnpkg.com/gulplog/-/gulplog-1.0.0.tgz#e28c4d45d05ecbbed818363ce8f9c5926229ffe5"
   dependencies:
     glogg "^1.0.0"
+
+gutil@1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/gutil/-/gutil-1.6.4.tgz#77cf9faa058c0476d63b9d3ac5fbe04e072f6cd2"
+  dependencies:
+    sliced "*"
 
 har-schema@^1.0.5:
   version "1.0.5"
@@ -4172,6 +4198,10 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
+sliced@*:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -4499,6 +4529,13 @@ through2@2.0.1:
     readable-stream "~2.0.0"
     xtend "~4.0.0"
 
+through2@2.0.3, through2@^2.0.0, through2@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
+  dependencies:
+    readable-stream "^2.1.5"
+    xtend "~4.0.1"
+
 through2@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/through2/-/through2-0.5.1.tgz#dfdd012eb9c700e2323fd334f38ac622ab372da7"
@@ -4512,13 +4549,6 @@ through2@^0.6.1:
   dependencies:
     readable-stream ">=1.0.33-1 <1.1.0-0"
     xtend ">=4.0.0 <4.1.0-0"
-
-through2@^2.0.0, through2@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
-  dependencies:
-    readable-stream "^2.1.5"
-    xtend "~4.0.1"
 
 through@2, through@~2.3, through@~2.3.1:
   version "2.3.8"

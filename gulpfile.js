@@ -5,6 +5,8 @@
 // # Plugins here #
 var gulp = require('gulp'),
     glob = require('glob'),
+    plumber = require('gulp-plumber'),
+    errorHandler = require('gulp-error-handle'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     pug = require('gulp-pug'),
@@ -21,6 +23,7 @@ var gulp = require('gulp'),
 //     Local: http://localhost:3000 (Main pc)
 //  External: http://your-ip:3000   (Other devices)
 // -------------------------------------------------
+
 
 gulp.task('browser-sync', function () {
     browserSync({

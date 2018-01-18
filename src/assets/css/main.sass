@@ -26,6 +26,21 @@ a
 
 ::selection
     background: rgba(40, 58, 90, 0.1)
+
+// Media Query Mixins //
+
+=tablet
+  @media (max-width: 768px)
+    @content
+
+=mobile
+  @media (max-width: 480px)
+    @content
+
+
+
+
+
 //  variables settings   //
 $apply: all 0.3s ease-in // Animation
 
@@ -45,7 +60,6 @@ $f-other: "pt-sans"
 
 
 // Code
-
 body
     margin: 0
     padding: 0
@@ -53,7 +67,6 @@ body
     color: $text
     font-family: $f-other
     font-size: 18px
-
 *
     box-sizing: border-box
 
@@ -74,14 +87,19 @@ body
     margin: -60px auto 50px auto
     //background: rgba(0,225,0, .2)
     font-family: $f-title
-    font-size: 7em
+    font-size: 5em
     display: flex
     justify-content: center
     align-items: center
     color: $title
+    +tablet
+        font-size: 4em
+    +mobile
+        font-size: 3em
+
     .rotate-font
         transform: rotate(-10deg)
-        margin: 0px auto 0 auto
+        margin: 50px auto 0 auto
 header
     width: 100%
     height: 100vh
@@ -97,11 +115,23 @@ header
         font-family: $f-title
         color: $background
         margin: -30px 0
+        +mobile
+            margin: -15px 0
+        +tablet
+            margin: -15px 0
     .name
-        font-size: 8em
+        font-size: 7em
+        +tablet
+            font-size: 5em
+        +mobile
+            font-size: 4em
     .type
         font-size: 3em
         align: center
+        +tablet
+            font-size: 2em
+        +mobile
+            font-size: 2em
     .icon
         bottom: 10%
         transform: translateY(-10%)
@@ -109,13 +139,15 @@ header
         width: 0
         height: 0
         border-style: solid
-        border-width: 50px 30px 0 30px
+        border-width: 30px 20px 0 20px
         border-color: #ffffff transparent transparent transparent
         line-height: 0px
         transform-origin: 50% 50%
         animation: icon-tap 1.5s infinite
         _border-color: #ffffff #000000 #000000 #000000
         _filter: progid:DXImageTransform.Microsoft.Chroma(color='#ffffff')
+        +mobile
+            border-width: 40px 25px 0 25px
 
 
 @keyframes icon-tap
@@ -125,46 +157,92 @@ header
     100%
         transform: translateY(20px)
         opacity: 0
+
+@keyframes hover-tap
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(.8)
+    100%
+        transform: scale(1)
     
 .a-container, .b-container, .c-container, .d-container, .e-container
     width: 80%
     min-height: 200px
-    //background: gray
     margin: auto
+    +tablet
+        width: 100%
+        padding: 0 20px
 .a-container
-    .image-container
-        width: 50%
+    .container
+        width: 100%
         min-height: 200px
-        float: left
-        display: flex
-        justify-content: flex-end
-        img
-            height: 200px
-            transform: rotate(15deg)
-    .info-container
-        width: 50%
-        min-height: 200px
-        float: left
-        padding: 0 50px
-        .title
-            font-size: 50px
-            font-weight: 600
-            .model
-                color: #283a5a
-                margin-left: 10px
-        .info
-            font-size: 26px
-.b-container
+        margin: 40px auto
+        .image-container
+            width: 50%
+            min-height: 200px
+            float: left
+            display: flex
+            justify-content: flex-end
+            +tablet
+                width: 100%
+                float: none
+                justify-content: center
+            img
+                max-width: 100%
+                transform: rotate(15deg)
+                +mobile
+                    transform: rotate(0deg)
+        .info-container
+            width: 50%
+            min-height: 200px
+            float: left
+            padding: 0 50px
+            display: flex
+            flex-direction: column
+            +tablet
+                width: 100%
+                float: none
+                margin-top: 70px
+                justify-content: center
+                padding: 0
+            .title
+                font-size: 60px
+                font-weight: 600
+                +tablet
+                    font-size: 50px
+                    margin: auto
+                .model
+                    color: #283a5a
+                    margin-left: 10px
+            .info
+                font-size: 25px
+                +tablet
+                    max-width: 80%
+                    font-size: 28px
+                    margin: auto
+.b-container // galeria
     display: flex
     flex-wrap: wrap
+    +mobile
+            flex-direction: column
     .row
         display: flex
         flex-wrap: wrap
+        flex-direction: row
         padding: 0 4px
+        +tablet
+        +mobile
+            flex-direction: column
     .column
-        flex: 25%
-        max-width: 25%
+        flex: 33.333333%
+        max-width: 33.333333%
         padding: 0 4px
+        +tablet
+        +mobile
+            flex: 100%
+            max-width: 100%
+
     .column img
         margin-top: 8px
         vertical-align: middle
@@ -172,17 +250,26 @@ header
 .c-container
     .container-bg
         width: 100%
-        height: 700px
+        height: 450px
+        max-height: 700px
         background:
             image: url('../img/bg-macbook.jpg')
             size: cover
             position: center center
+        +tablet
+            height: 350px
+        +mobile
+            height: 250px
     .container-image
         width: 75%
-        height: 500px
+        max-height: 500px
         margin: -250px auto 0px auto
         img
             width: 100%
+        +tablet
+            margin: -200px auto 0px auto
+        +mobile
+            margin: -100px auto 0px auto
 .d-container
     .container-image
         width: 100%
@@ -197,41 +284,93 @@ header
             align-content: stretch
             align-items: flex-start
             .flex-item
-                border: 5px $background solid
+                border: 5px transparent solid
                 height: 300px
+                display: flex
+                justify-content: center
+                align-items: center
                 &:nth-child(1)
                     width: 70%
-                    order: 0
                     flex: 2 1 auto
                     align-self: auto
+                    background:
+                        image: url('../img/fotky/img-w.jpg')
+                        size: cover
+                        repeat: no-repeat
+                        position: center center
+                    +tablet
+                    +mobile
+                        width: 100%
                 &:nth-child(2)
                     width: 30%
-                    order: 0
                     flex: 1 1 auto
                     align-self: auto
+                    background:
+                        image: url('../img/fotky/img-h.jpg')
+                        size: cover
+                        repeat: no-repeat
+                        position: center center
+                    +tablet
+                    +mobile
+                        width: 100%
                 &:nth-child(3)
                     width: 30%
-                    order: 0
                     flex: 1 1 auto
                     align-self: auto
+                    background:
+                        image: url('../img/fotky/img-w.jpg')
+                        size: cover
+                        repeat: no-repeat
+                        position: center center
+                    +tablet
+                    +mobile
+                        width: 100%
                 &:nth-child(4)
                     width: 70%
-                    order: 0
                     flex: 1 1 auto
                     align-self: auto
+                    background:
+                        image: url('../img/fotky/img-h.jpg')
+                        size: cover
+                        repeat: no-repeat
+                        position: center center
+                    +tablet
+                    +mobile
+                        width: 100%
+                .tap-icon
+                    width: 50px
+                    height: 50px
+                    img
+                    animation: hover-tap 1.5s infinite
+                    cursor: pointer
+                    transition: opacity .1s ease-in
+                    opacity: .7
+                    &:hover
+                        opacity: 1
+                        animation: none
     .container-macs
         width: 60%
-        height: 500px
-        margin: -200px auto 50px auto
+        max-height: 500px
+        margin: -200px auto 0 auto
+        +tablet
+            width: 80%
+            margin: -200px auto 0 auto
+        +mobile
+            width: 90%
+            margin: -100px auto 0 auto
         img
             width: 100%
     .container-text
-        width: 30%
+        width: 100%
+        max-width: 340px
         min-height: 100px
         line-height: 30px
         margin: auto
         text-align: justify
         text-align-last: center
+        +tablet
+        +mobile
+            width: 80%
         
 
 .e-container
@@ -248,11 +387,14 @@ header
         width: 100%
         min-height: 100px
         text-align: center
-        line-height: 40px
+        line-height: 30px
         p
             width: 100%
             max-width: 500px
             margin: auto
+            +tablet
+            +mobile
+                width: 90%
 footer
     width: 90%
     min-height: 100px
@@ -268,6 +410,7 @@ footer
         display: flex
         justify-content: center
         align-items: center
+        transform: scale(1.2)
     .social
         width: 100%
         height: 20px
