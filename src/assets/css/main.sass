@@ -105,8 +105,8 @@ body
             top: 50%
             transform: translateY(-50%)
         a
-            width: 45px
-            height: 45px
+            width: 50px
+            height: 50px
             background: #f8f8f8
             position: relative
             z-index: 10
@@ -121,6 +121,9 @@ body
             &:hover
                 background: #272829
                 color: #f8f8f8
+            +mobile
+                width: 40px
+                height: 45px
 .active
     color: #f8f8f8 !important
     background: #272829 !important
@@ -239,6 +242,7 @@ header
     min-height: 200px
     margin: auto
     max-width: 1400px
+    overflow: hidden
     +tablet
         width: 100%
         padding: 0 20px
