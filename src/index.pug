@@ -9,41 +9,31 @@ html(lang="sk")
         link(href="assets/css/main.css", rel="stylesheet")
     body
         // Menu
-        .menu
-            .container
-                ul.progressbar
-                    li.active
-                        a(href="#home") Domov
-                    li
-                        a(href="#use") Gear
-                    li
-                        a(href="#gallery") Fotografie
-                    li
-                        a(href="#edit") Úprava
-                    li
-                        a(href="#lightroom") Lightroom
-                    li
-                        a(href="#about") O mne
-                    li
-                        a(href="#contact") Kontakt
-                    
-                    
-
-
-
+        .menu-bar
+            .menu-container
+                .bg-line
+                a(href="#home") A
+                a(href="#use") B
+                a(href="#gallery") C
+                a(href="#edit") D
+                a(href="#lightroom") E
+                a(href="#about") F
+                a(href="#contact") G
+                
 
         // Start
-        header#home
+        header#home.page-section
             span.name Mário Ďak
             span.type photography
             .icon
         .line-container
             .line
-        .title-container
+            .menu-port#use.page-section
+        .title-container.anim
             p Čo používam?
-        .a-container#use
-            .container
-                .image-container
+        .a-container#use.page-section
+            .container.anim
+                .image-container.anim
                     img(alt="neexistuje" src="assets/img/canon_dslr.png")
                 .info-container
                     span.title
@@ -57,17 +47,15 @@ html(lang="sk")
                         br
                         | - FHD video
             br
-            .container
+            .container.anim
                 .image-container
-                    img(alt="neexistuje" src="assets/img/canon_dslr.png")
+                    img(alt="neexistuje" src="assets/img/canon_50mm.png")
                 .info-container
                     span.title
                         | Hlavný
                         span.model Objektív
                     br
                     span.info
-                        | - cena 120€
-                        br
                         | - Canon
                         br
                         | - f/1.8
@@ -76,68 +64,81 @@ html(lang="sk")
                         br
                         | - rotačný motorček
             br
-            .container
+            .container.anim
                 .image-container
-                    img(alt="neexistuje" src="assets/img/canon_dslr.png")
+                    img(alt="neexistuje" src="assets/img/canon_18_55mm.png")
                 .info-container
                     span.title
                         | Kitový
                         span.model objektív
                     br
                     span.info
-                        | - cena 60€
-                        br
                         | - Canon
                         br
                         | - f/3.5 - f/5.6
                         br
                         | - 18-55mm
                         br
-                        | - kitový
+                        | - bez motorčeku
         .line-container
             .line
-        .title-container
+            .menu-port#gallery.page-section
+        .title-container.anim
             p Fotografia
-        .b-container#gallery
+        .b-container
             .row
-                .column
-                    img(src="assets/img/fotky/cropped-image-1.jpg")
-                    img(src="assets/img/fotky/cropped-image-1.jpg")
-                    img(src="assets/img/fotky/cropped-image-2.jpg")
-                .column
-                    img(src="assets/img/fotky/cropped-image-2.jpg")
-                    img(src="assets/img/fotky/cropped-image-1.jpg")
-                    img(src="assets/img/fotky/cropped-image-2.jpg")
-                .column
-                    img(src="assets/img/fotky/cropped-image-1.jpg")
-                    img(src="assets/img/fotky/cropped-image-2.jpg")
-                    img(src="assets/img/fotky/cropped-image-1.jpg")
+                .column.anim
+                    img(src="assets/img/fotky/img-1.jpg")
+                    img(src="assets/img/fotky/img-2.jpg")
+                    img(src="assets/img/fotky/img-3.jpg")
+                    img(src="assets/img/fotky/img-4.jpg")
+                    img(src="assets/img/fotky/img-5.jpg")
+                    img(src="assets/img/fotky/img-6.jpg")
+                    img(src="assets/img/fotky/img-7.jpg")
+                .column.anim
+                    img(src="assets/img/fotky/img-12.jpg")
+                    img(src="assets/img/fotky/img-13.jpg")
+                    img(src="assets/img/fotky/img-14.jpg")
+                    img(src="assets/img/fotky/img-15.jpg")
+                    img(src="assets/img/fotky/img-8.jpg")
+                    img(src="assets/img/fotky/img-16.jpg")
+                .column.anim
+                    img(src="assets/img/fotky/img-17.jpg")
+                    img(src="assets/img/fotky/img-18.jpg")
+                    img(src="assets/img/fotky/img-19.jpg")
+                    img(src="assets/img/fotky/img-20.jpg")
+                    img(src="assets/img/fotky/img-9.jpg")
+                    img(src="assets/img/fotky/img-10.jpg")
+                    img(src="assets/img/fotky/img-11.jpg")
+                    
         .line-container
             .line
-        .title-container
+            .menu-port#edit.page-section
+        .title-container.anim
             p Postprodukcia
-        .c-container#edit
+        .c-container
             .container-bg
             .container-image
                 img(alt="neexistuje" src="assets/img/macbook-edit.png")
         .line-container
             .line
-        .title-container
+            .menu-port#lightroom.page-section
+        .title-container.anim
             p Úprava fotiek?
-        .d-container#lightroom
+        .d-container
             .container-image
                 .flex-container
-                    .flex-item
-                        .tap-icon
+                    .flex-item.one-anim-item
+                        .tap-icon#one-anim-change
                             img(alt="neexistuje" width="50" src="assets/icon/finger.svg")
-                    .flex-item
-                        .tap-icon
+                    .flex-item.two-anim-item
+                        .tap-icon#two-anim-change
                             img(alt="neexistuje" width="50" src="assets/icon/finger.svg")
                     .flex-item
                     .flex-item
             .container-macs
                 img(alt="neexistuje" src="assets/img/imacs.png")
-            .title-container
+            .title-container.anim
                 p.rotate-font Lightroom
             .container-text
                 p Za všetko môže tento skvelý program!
@@ -145,28 +146,44 @@ html(lang="sk")
                 p Lightroom je platený produkt od spoločnosti Adobe, s ktorým dokážete upravovať fotografie a spraviť z nich niečo neuveriteľné..
         .line-container
             .line
-        .title-container
+            .menu-port#about.page-section
+        .title-container.anim
             p Kto som?
-        .e-container#about
+        .e-container
             .container-image
                 img(alt="neexistuje" src="assets/img/profile.jpg")
             .container-text
-                p
-                    | - Moje meno je Mário Ďak.
+                hr
+                p.one
+                    | Zdravím, rád by som sa predstavil.. Volám sa Mário Ďak a som študentom na SOŠ Technickej v Humennom. Rád sa venujem programovaniu webových stránok, hlavnou záľubou je fotografovanie.
+            .container-text
+                hr
+                p.structure
+                    span.main Meno:
+                    span.sub Mário Ďak
                     br
-                    | - Mám 19r.
+                    span.main Tel.č.:
+                    span.sub +421 xxx xxx xxx
                     br
-                    | - Som študent na SOS Technickej, Humenné.
+                    span.main E-mail:
+                    span.sub e.mariodak@gmail.com
                     br
-                    | - Zaoberám sa tvorbou webov a fotografií.
+                    span.main Adresa:
+                    span.sub družstevná, Humenné
                     br
-                    | - Odborne sa venujem dizajnu.
+                    span.main Firma:
+                    span.sub MD Photography s.r.o
                     br
+                    span.main Meno:
+                    span.sub Mário Ďak
+                    br
+                    
         .line-container
             .line
-        .title-container
+            .menu-port#contact.page-section
+        .title-container.anim
             p Kontaktuj ma
-        footer#contact
+        footer
             .container
                 .email
                     a(href="mailto:e.mariodak@gmail.com") e.mariodak@gmail.com
@@ -177,7 +194,8 @@ html(lang="sk")
                         .facebook
                     a(target="_blank" href="https://www.twitter.com/ofmarioo")
                         .twitter
-
+        .line-container
+            .line
 
         // Scripts
         script(src="assets/js/jquery-3.2.1.min.js")

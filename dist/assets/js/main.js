@@ -1,5 +1,3 @@
-'use strict';
-
 // Main JS File
 
 // Blokuje Zoom na prehliadačoch
@@ -10,60 +8,109 @@ document.addEventListener('touchmove', function (event) {
     }
 }, false);
 
+
+// zakáže ťahať obrázky zo stránky
+
+
 // Aktivuje effekt po scrollnutí --px
 
-// Added dynamic class by @fazulkovy
-var objects = $('.object');
-function scrollAnimation() {
-
-    var scroll = $(window).scrollTop();
-
-    objects.each(function (index, object) {
-        var calcHeight = $(window).height() - $(object).height();
-        var totalDistance = $(object).offset().top - calcHeight;
-
-        if (scroll >= totalDistance) $(object).addClass('apply');else $(object).removeClass('apply');
-    });
-}
-scrollAnimation();
-$(window).scroll(scrollAnimation);
-
-// Menu loading
 $(document).ready(function () {
-    $(document).on("scroll", onScroll);
 
-    //smoothscroll
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
+    /* Every time the window is scrolled ... */
+    $(window).scroll(function () {
 
-        $('a').each(function () {
-            $(this).removeClass('active');
+        /* Check the location of each desired element */
+        $('.anim').each(function (i) {
+
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it it */
+            if (bottom_of_window > bottom_of_object) {
+
+                $(this).animate({ 'opacity': '1', 'transform': 'translateY(0px)' }, 500);
+
+            }
+
         });
-        $(this).addClass('active');
 
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top + 2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
+    });
+
+});
+//
+
+
+// Smooth scroll
+
+jQuery(document).ready(function () {
+    // Add smooth scrolling to all links
+    jQuery("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            jQuery('html, body').animate({
+                scrollTop: jQuery(hash).offset().top
+            }, 800, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        } // End if
     });
 });
 
-function onScroll(event) {
-    var scrollPos = $(document).scrollTop();
-    $('.menu .progressbar li a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.menu .progressbar li').removeClass(".menu .progressbar li .active");
-            currLink.addClass("active");
-        } else {
-            currLink.removeClass("active");
-        }
-    });
-}
+// CURRENT ACTIVE MENU
+var sections = $('.page-section')
+  , nav = $('.menu-bar')
+  , nav_height = nav.outerHeight();
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+  
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+    
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      //sections.removeClass('active');
+      
+      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+});
+
+nav.find('a').on('click', function () {
+  var $el = $(this)
+    , id = $el.attr('href');
+  
+  $('html, body').animate({
+    scrollTop: $(id).offset().top - nav_height
+  }, 500);
+  
+  return false;
+});
+
+
+
+
+
+// Add animations
+
+$('#one-anim-change').hover(
+    function () { $('.one-anim-item').addClass('hover') },
+    function () { $('.one-anim-item').removeClass('hover') }
+)
+
+$('#two-anim-change').hover(
+    function () { $('.two-anim-item').addClass('hover') },
+    function () { $('.two-anim-item').removeClass('hover') }
+)
