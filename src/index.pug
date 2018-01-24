@@ -8,9 +8,9 @@ html(lang="sk")
         link(rel='shortcut icon' type='image/x-icon' href='favicon.ico')
         link(href="assets/css/main.css", rel="stylesheet")
         // share
-        meta(property='og:title', content='Mário Ďak Photography')
+        meta(property='og:title', content='Filip Kasarda')
         meta(property='og:description', content='Portfólio')
-        meta(property='og:image', content='assets/img/og-image.jpg')
+        meta(property='og:image', content='https://mariodak.github.io/graduation/src/assets/img/og-image.jpg')
         //meta(property='og:url', content='')
     body
         // Preload
@@ -27,7 +27,7 @@ html(lang="sk")
                 a(href="#lightroom") E
                 a(href="#about") F
                 a(href="#contact") G
-                
+
 
         // Start
         header#home.page-section
@@ -90,122 +90,127 @@ html(lang="sk")
                         | - bez motorčeku
         .line-container
             .line
-            .menu-port#gallery.page-section
-        .title-container.anim
-            p Fotografia
-        
-        // fullscreen image
-        #overlay
-            #background
-                img#full(src='', alt='')
-
-        .b-container
-            .row
-                .column.anim
-                    img#thumbs-1(src='assets/img/fotky/thumbs/img-1.jpg')
-                    img(id="thumbs-2" src="assets/img/fotky/thumbs/img-2.jpg")
-                    img(id="thumbs-3" src="assets/img/fotky/thumbs/img-3.jpg")
-                    img(id="thumbs-4" src="assets/img/fotky/thumbs/img-4.jpg")
-                    img(id="thumbs-5" src="assets/img/fotky/thumbs/img-5.jpg")
-                    img(id="thumbs-6" src="assets/img/fotky/thumbs/img-6.jpg")
-                .column.anim
-                    img(id="thumbs-7" src="assets/img/fotky/thumbs/img-7.jpg")
-                    img(id="thumbs-8" src="assets/img/fotky/thumbs/img-8.jpg")
-                    img(id="thumbs-9" src="assets/img/fotky/thumbs/img-9.jpg")
-                    img(id="thumbs-10" src="assets/img/fotky/thumbs/img-10.jpg")
-                    img(id="thumbs-11" src="assets/img/fotky/thumbs/img-11.jpg")
-                    img(id="thumbs-12" src="assets/img/fotky/thumbs/img-12.jpg")
-                .column.anim
-                    img(id="thumbs-13" src="assets/img/fotky/thumbs/img-13.jpg")
-                    img(id="thumbs-14" src="assets/img/fotky/thumbs/img-14.jpg")
-                    img(id="thumbs-15" src="assets/img/fotky/thumbs/img-15.jpg")
-                    img(id="thumbs-16" src="assets/img/fotky/thumbs/img-16.jpg")
-                    img(id="thumbs-17" src="assets/img/fotky/thumbs/img-17.jpg")
-                    img(id="thumbs-18" src="assets/img/fotky/thumbs/img-18.jpg")
-                    
-        .line-container
-            .line
-            .menu-port#edit.page-section
-        .title-container.anim
-            p Postprodukcia
-        .c-container
-            .container-bg
-            .container-image
-                img(alt="neexistuje" src="assets/img/macbook-edit.png")
-        .line-container
-            .line
-            .menu-port#lightroom.page-section
-        .title-container.anim
-            p Úprava fotiek?
-        .d-container
-            .container-image
-                .flex-container
-                    .flex-item.one-anim-item
-                        .tap-icon#one-anim-change
-                            img(alt="neexistuje" width="50" src="assets/icon/finger.svg")
-                    .flex-item.two-anim-item
-                        .tap-icon#two-anim-change
-                            img(alt="neexistuje" width="50" src="assets/icon/finger.svg")
-                    .flex-item
-                    .flex-item
-            .container-macs
-                img(alt="neexistuje" src="assets/img/imacs.png")
+            .menu-port
+        #gallery.page-section
             .title-container.anim
-                p.rotate-font Lightroom
-            .container-text
-                p Za všetko môže tento skvelý program!
-                br
-                p Lightroom je platený produkt od spoločnosti Adobe, s ktorým dokážete upravovať fotografie a spraviť z nich niečo neuveriteľné..
+                p Fotografia
+
+            // fullscreen image
+            #overlay
+                #background
+                    img#full(src='', alt='')
+
+            .b-container
+                .row
+                    .column.anim
+                        img#thumbs-1(src='assets/img/fotky/thumbs/img-1.jpg')
+                        img(id="thumbs-2" src="assets/img/fotky/thumbs/img-2.jpg")
+                        img(id="thumbs-3" src="assets/img/fotky/thumbs/img-3.jpg")
+                        img(id="thumbs-4" src="assets/img/fotky/thumbs/img-4.jpg")
+                        img(id="thumbs-5" src="assets/img/fotky/thumbs/img-5.jpg")
+                        img(id="thumbs-6" src="assets/img/fotky/thumbs/img-6.jpg")
+                    .column.anim
+                        img(id="thumbs-7" src="assets/img/fotky/thumbs/img-7.jpg")
+                        img(id="thumbs-8" src="assets/img/fotky/thumbs/img-8.jpg")
+                        img(id="thumbs-9" src="assets/img/fotky/thumbs/img-9.jpg")
+                        img(id="thumbs-10" src="assets/img/fotky/thumbs/img-10.jpg")
+                        img(id="thumbs-11" src="assets/img/fotky/thumbs/img-11.jpg")
+                        img(id="thumbs-12" src="assets/img/fotky/thumbs/img-12.jpg")
+                    .column.anim
+                        img(id="thumbs-13" src="assets/img/fotky/thumbs/img-13.jpg")
+                        img(id="thumbs-14" src="assets/img/fotky/thumbs/img-14.jpg")
+                        img(id="thumbs-15" src="assets/img/fotky/thumbs/img-15.jpg")
+                        img(id="thumbs-16" src="assets/img/fotky/thumbs/img-16.jpg")
+                        img(id="thumbs-17" src="assets/img/fotky/thumbs/img-17.jpg")
+                        img(id="thumbs-18" src="assets/img/fotky/thumbs/img-18.jpg")
+
         .line-container
             .line
-            .menu-port#about.page-section
-        .title-container.anim
-            p Kto som?
-        .e-container
-            .container-image
-                img(alt="neexistuje" src="assets/img/profile.jpg")
-            .container-text
-                hr
-                p.one
-                    | Zdravím, rád by som sa predstavil.. Volám sa Mário Ďak a som študentom na SOŠ Technickej v Humennom. Rád sa venujem programovaniu webových stránok, hlavnou záľubou je fotografovanie.
-            .container-text
-                hr
-                p.structure
-                    span.main Meno:
-                    span.sub Mário Ďak
+            .menu-port
+        #edit.page-section
+            .title-container.anim
+                p Postprodukcia
+            .c-container
+                .container-bg
+                .container-image
+                    img(alt="neexistuje" src="assets/img/macbook-edit.png")
+            .line-container
+            .line
+            .menu-port
+        #lightroom.page-section
+            .title-container.anim
+                p Úprava fotiek?
+            .d-container
+                .container-image
+                    .flex-container
+                        .flex-item.one-anim-item
+                            .tap-icon#one-anim-change
+                                img(alt="neexistuje" width="50" src="assets/icon/finger.svg")
+                        .flex-item.two-anim-item
+                            .tap-icon#two-anim-change
+                                img(alt="neexistuje" width="50" src="assets/icon/finger.svg")
+                        .flex-item
+                        .flex-item
+                .container-macs
+                    img(alt="neexistuje" src="assets/img/imacs.png")
+                .title-container.anim
+                    p.rotate-font Lightroom
+                .container-text
+                    p Za všetko môže tento skvelý program!
                     br
-                    span.main Tel.č.:
-                    span.sub +421 xxx xxx xxx
-                    br
-                    span.main E-mail:
-                    span.sub e.mariodak@gmail.com
-                    br
-                    span.main Adresa:
-                    span.sub družstevná, Humenné
-                    br
-                    span.main Firma:
-                    span.sub MD Photography s.r.o
-                    br
-                    span.main Meno:
-                    span.sub Mário Ďak
-                    br
-                    
+                    p Lightroom je platený produkt od spoločnosti Adobe, s ktorým dokážete upravovať fotografie a spraviť z nich niečo neuveriteľné..
         .line-container
             .line
-            .menu-port#contact.page-section
-        .title-container.anim
-            p Kontaktuj ma
-        footer
-            .container
-                .email
-                    a(href="mailto:e.mariodak@gmail.com") e.mariodak@gmail.com
-                .social
-                    a(target="_blank" href="https://www.instagram.com/ofmarioo")
-                        .instagram
-                    a(target="_blank" href="https://www.facebook.com/ofmarioo")
-                        .facebook
-                    a(target="_blank" href="https://www.twitter.com/ofmarioo")
-                        .twitter
+            .menu-port
+        #about.page-section
+            .title-container.anim
+                p Kto som?
+            .e-container
+                .container-image
+                    img(alt="neexistuje" src="assets/img/profile.jpg")
+                .container-text
+                    hr
+                    p.one
+                        | Zdravím, rád by som sa predstavil.. Volám sa Mário Ďak a som študentom na SOŠ Technickej v Humennom. Rád sa venujem programovaniu webových stránok, hlavnou záľubou je fotografovanie.
+                .container-text
+                    hr
+                    p.structure
+                        span.main Meno:
+                        span.sub Mário Ďak
+                        br
+                        span.main Tel.č.:
+                        span.sub +421 xxx xxx xxx
+                        br
+                        span.main E-mail:
+                        span.sub e.mariodak@gmail.com
+                        br
+                        span.main Adresa:
+                        span.sub družstevná, Humenné
+                        br
+                        span.main Firma:
+                        span.sub MD Photography s.r.o
+                        br
+                        span.main Meno:
+                        span.sub Mário Ďak
+                        br
+
+        .line-container
+            .line
+            .menu-port
+        #contact.page-section
+            .title-container.anim
+                p Kontaktuj ma
+            footer
+                .container
+                    .email
+                        a(href="mailto:e.mariodak@gmail.com") e.mariodak@gmail.com
+                    .social
+                        a(target="_blank" href="https://www.instagram.com/ofmarioo")
+                            .instagram
+                        a(target="_blank" href="https://www.facebook.com/ofmarioo")
+                            .facebook
+                        a(target="_blank" href="https://www.twitter.com/ofmarioo")
+                            .twitter
         .line-container
             .line
 
