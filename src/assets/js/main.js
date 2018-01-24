@@ -23,109 +23,109 @@ document.addEventListener('touchmove', function (event) {
 // Zobrazí obrázky
 $(document).ready(function () {
 
-    $("#thumbnail-1").click(function () {
+    $("#thumbs-1").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-1.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-2").click(function () {
+    $("#thumbs-2").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-2.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-3").click(function () {
+    $("#thumbs-3").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-3.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-4").click(function () {
+    $("#thumbs-4").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-4.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-5").click(function () {
+    $("#thumbs-5").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-5.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-6").click(function () {
+    $("#thumbs-6").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-6.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-7").click(function () {
+    $("#thumbs-7").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-7.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-8").click(function () {
+    $("#thumbs-8").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-8.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-9").click(function () {
+    $("#thumbs-9").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-9.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-10").click(function () {
+    $("#thumbs-10").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-10.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-11").click(function () {
+    $("#thumbs-11").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-11.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-12").click(function () {
+    $("#thumbs-12").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-12.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-13").click(function () {
+    $("#thumbs-13").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-13.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-14").click(function () {
+    $("#thumbs-14").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-14.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-15").click(function () {
+    $("#thumbs-15").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-15.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-16").click(function () {
+    $("#thumbs-16").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-16.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-17").click(function () {
+    $("#thumbs-17").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-17.jpg");
         $("#background").show();
         $("#overlay").show();
     });
 
-    $("#thumbnail-18").click(function () {
+    $("#thumbs-18").click(function () {
         $("#full").attr("src", "assets/img/fotky/fullsize/img-18.jpg");
         $("#background").show();
         $("#overlay").show();
