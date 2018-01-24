@@ -1,6 +1,6 @@
 @font-face {
   src: url("../fonts/drybrush.ttf") format("truetype");
-  font-family: DryBrush;
+  font-family: drybrush;
   font-weight: 400;
   font-style: regular; }
 
@@ -136,7 +136,7 @@ body {
   width: 90%;
   height: 200px;
   margin: -60px auto 50px auto;
-  font-family: "DryBrush" !important;
+  font-family: "drybrush" !important;
   font-size: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,7 +180,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover; }
   header .name, header .type {
-    font-family: "DryBrush" !important;
+    font-family: "drybrush" !important;
     color: #f8f8f8;
     margin: -30px 0; }
     @media (max-width: 480px) {

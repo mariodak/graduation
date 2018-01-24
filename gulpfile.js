@@ -62,7 +62,7 @@ gulp.task("build", function () {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('src'))
         .pipe(logger({
             before: 'Compiling PUG..',
             after: 'PUG Compiled!',
@@ -77,7 +77,7 @@ gulp.task("build", function () {
             browsers: ['last 3 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('src'))
         .pipe(logger({
             before: 'Compiling SASS..',
             after: 'SASS Compiled!',
@@ -90,7 +90,7 @@ gulp.task("build", function () {
         .pipe(babel({
             presets: ['env']
         }))
-        .pipe(gulp.dest('dist/'))
+        .pipe(gulp.dest('src'))
         .pipe(logger({
             before: 'Compiling JS..',
             after: 'JS Compiled!',
