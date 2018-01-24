@@ -43,11 +43,11 @@ gulp.task('browser-sync', function () {
 // # Compile PUG, SASS, JS & Watch changes #
 // #           Exclude _lib folder         #
 
-const pug_files = ['!src/{lib,lib/**}', '!src/**/lib/*.pug', 'src/**/*.pug'];
-const sass_files = ['!src/{lib,lib/**}', '!src/**/lib/*.sass', 'src/**/*.sass'];
-const js_files = ['!src/{lib,lib/**}', '!src/**/lib/*.sass', 'src/**/*.js'];
-const other_files = ['!src/assets/lib', '!src/**/*.{pug,sass}', 'src/**/*'];
-const prefix_files = ['!src/{lib,lib/**}', 'src/**/*.css'];
+const pug_files = ['src/**/*.pug'];
+const sass_files = ['src/**/*.sass'];
+const js_files = ['src/**/*.js'];
+const other_files = ['!src/**/*.{pug,sass}', 'src/**/*'];
+const prefix_files = ['src/**/*.css'];
 
 
 // # Build Website, Compile sass, pug, js #
@@ -62,7 +62,7 @@ gulp.task("build", function () {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/'))
         .pipe(logger({
             before: 'Compiling PUG..',
             after: 'PUG Compiled!',
@@ -77,7 +77,7 @@ gulp.task("build", function () {
             browsers: ['last 3 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/'))
         .pipe(logger({
             before: 'Compiling SASS..',
             after: 'SASS Compiled!',
@@ -90,7 +90,7 @@ gulp.task("build", function () {
         .pipe(babel({
             presets: ['env']
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/'))
         .pipe(logger({
             before: 'Compiling JS..',
             after: 'JS Compiled!',
@@ -98,8 +98,7 @@ gulp.task("build", function () {
             showChange: true
         }));
 
-    // Copying files
-    gulp.src(other_files)
+    return gulp.src(other_files)
         .pipe(gulp.dest('dist'))
         .pipe(logger({
             before: 'Copying files..',
@@ -109,6 +108,7 @@ gulp.task("build", function () {
         }));
 
 });
+
 
 // # Build Website, Compile sass, pug, js #
 // #         adding prefix to css         #

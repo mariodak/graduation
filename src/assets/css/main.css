@@ -1,20 +1,20 @@
 @font-face {
-  src: url("../fonts/DryBrush.ttf") format("truetype");
+  src: url("../fonts/drybrush.ttf") format("truetype");
   font-family: DryBrush;
   font-weight: 400;
   font-style: regular; }
 
 @font-face {
-  src: url("/assets/fonts/PT_Sans-Web-Regular.ttf") format("truetype");
-  font-family: pt-sans;
+  src: url("../fonts/ptsans.ttf") format("truetype");
+  font-family: ptsans;
   font-weight: 400;
   font-style: regular; }
 
 @font-face {
-  src: url("/assets/fonts/PT_Sans-Web-Italic.ttf") format("truetype");
-  font-family: pt-sans;
-  font-weight: 400;
-  font-style: italic; }
+  src: url("../fonts/ptsansbold.ttf") format("truetype");
+  font-family: ptsans;
+  font-weight: 600;
+  font-style: bold; }
 
 li {
   list-style: none; }
@@ -33,8 +33,7 @@ body {
   padding: 0;
   background-color: #f8f8f8;
   color: #696969;
-  font-family: "pt-sans";
-  font-size: 18px; }
+  font-family: "ptsans"; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -137,7 +136,7 @@ body {
   width: 90%;
   height: 200px;
   margin: -60px auto 50px auto;
-  font-family: "DryBrush";
+  font-family: "DryBrush" !important;
   font-size: 4em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,7 +180,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover; }
   header .name, header .type {
-    font-family: "DryBrush";
+    font-family: "DryBrush" !important;
     color: #f8f8f8;
     margin: -30px 0; }
     @media (max-width: 480px) {
@@ -404,7 +403,7 @@ header {
     flex: 33.333333%;
     max-width: 33.333333%;
     padding: 0 4px;
-    cursor: url("../icon/open.png"), auto; }
+    cursor: url("../icon/open.png") 25 25, auto; }
     @media (max-width: 480px) {
       .b-container .column {
         -webkit-box-flex: 100%;
@@ -482,12 +481,12 @@ header {
         -webkit-transition: background-image .3s ease-in;
         -o-transition: background-image .3s ease-in;
         transition: background-image .3s ease-in;
-        background-image: url("../img/fotky/after_before/img-1-before.jpg");
+        background-image: url("../img/after_before/img-1-before.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center; }
         .d-container .container-image .flex-container .flex-item:nth-child(1).hover {
-          background-image: url("../img/fotky/after_before/img-1-after.jpg"); }
+          background-image: url("../img/after_before/img-1-after.jpg"); }
         @media (max-width: 480px) {
           .d-container .container-image .flex-container .flex-item:nth-child(1) {
             width: 100%; } }
@@ -501,12 +500,12 @@ header {
         -webkit-transition: background-image .3s ease-in;
         -o-transition: background-image .3s ease-in;
         transition: background-image .3s ease-in;
-        background-image: url("../img/fotky/after_before/img-2-before.jpg");
+        background-image: url("../img/after_before/img-2-before.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center; }
         .d-container .container-image .flex-container .flex-item:nth-child(2).hover {
-          background-image: url("../img/fotky/after_before/img-2-after.jpg"); }
+          background-image: url("../img/after_before/img-2-after.jpg"); }
         @media (max-width: 480px) {
           .d-container .container-image .flex-container .flex-item:nth-child(2) {
             width: 100%; } }
@@ -517,7 +516,7 @@ header {
         flex: 1 1 auto;
         -ms-flex-item-align: auto;
         align-self: auto;
-        background-image: url("../img/fotky/after_before/img-4-after.jpg");
+        background-image: url("../img/after_before/img-4-after.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center; }
@@ -531,7 +530,7 @@ header {
         flex: 1 1 auto;
         -ms-flex-item-align: auto;
         align-self: auto;
-        background-image: url("../img/fotky/after_before/img-3-after.jpg");
+        background-image: url("../img/after_before/img-3-after.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center; }
@@ -727,6 +726,14 @@ footer {
           -webkit-transform: translateY(-10px) rotateY(180deg);
           transform: translateY(-10px) rotateY(180deg); }
 
+.end-line {
+  margin-bottom: 30px !important; }
+
+.copyright {
+  text-align: center;
+  display: block;
+  margin-bottom: 30px; }
+
 #preloader {
   position: fixed;
   top: 0;
@@ -767,7 +774,7 @@ footer {
   display: none;
   overflow: hidden;
   z-index: 101;
-  cursor: url("../icon/close.png"), auto; }
+  cursor: url("../icon/close.png") 20 20, auto; }
 
 #full {
   max-width: 100%;
