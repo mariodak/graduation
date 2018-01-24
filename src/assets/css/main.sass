@@ -3,22 +3,28 @@
 
 // Importované fonty
 @font-face
-  src: url('../fonts/drybrush.ttf') format("truetype")
-  font-family: drybrush
+  font-family: 'drybrush'
+  src: url('../fonts/drybrush.eot')
+  src: url('../fonts/drybrush.eot?#iefix') format('embedded-opentype'), url('../fonts/drybrush.woff2') format("woff2"), url('../fonts/drybrush.woff') format("woff"), url('../fonts/drybrush.ttf') format("truetype")
   font-weight: 400
-  font-style: regular
+  font-style: normal
+  font-stretch: normal
 
 @font-face
-  src: url('../fonts/ptsans.ttf') format("truetype")
-  font-family: ptsans
+  font-family: 'ptsans'
+  src: url('../fonts/ptsans.eot')
+  src: url('ptsans.eot?#iefix') format('embedded-opentype'), url('../fonts/ptsans.woff2') format("woff2"), url('../fonts/ptsans.woff') format("woff"), url('../fonts/ptsans.ttf') format("truetype")
   font-weight: 400
-  font-style: regular
+  font-style: normal
+  font-stretch: normal
 
 @font-face
-  src: url('../fonts/ptsansbold.ttf') format("truetype")
-  font-family: ptsans
+  font-family: 'ptsans'
+  src: url('../fonts/ptsansbold.eot')
+  src: url('ptsansbold.eot?#iefix') format('embedded-opentype'), url('../fonts/ptsansbold.woff2') format("woff2"), url('../fonts/ptsansbold.woff') format("woff"), url('../fonts/ptsansbold.ttf') format("truetype")
   font-weight: 600
   font-style: bold
+  font-stretch: normal
 
 li
     list-style: none
@@ -332,8 +338,9 @@ header
         max-height: 100%
         background:
             image: url('../img/bg-macbook.jpg')
-            size: cover
+            size: contain
             position: center center
+            repeat: no-repeat
         +tablet
         +mobile
     .container-image
