@@ -6,11 +6,14 @@
 
 $(function () {
 
-    // makes sure the whole site is loaded
-    $('#status').fadeOut(); // will first fade out the loading animation
-    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('body').delay(350).css({ 'overflow': 'visible' });
+    $(window).on('load', function () {
+        // makes sure the whole site is loaded 
+        $('#status').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(350).css({ 'overflow': 'visible' });
+    });
 
+    // Blokuje ťahanie objektov
     window.ondragstart = function () {
         return false;
     };
@@ -97,6 +100,9 @@ $(function () {
         $('.two-anim-item').removeClass('hover');
     });
 });
+
+// Zobrazí element po scrolnutí
+
 
 // Blokuje Zoom na prehliadačoch
 document.addEventListener('touchmove', function (event) {

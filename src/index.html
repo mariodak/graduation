@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="html, css, js, gulpjs, gulp, maturita, 2018, mario, dak, mariodak">
+    <meta name="author" content="Mário Ďak">
     <title>Mário Ďak - Photography</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="assets/css/main.css" rel="stylesheet">
-    <!-- fonts-->
-    <!-- share-->
-    <meta property="og:title" content="Filip Kasarda">
-    <meta property="og:description" content="Portfólio">
-    <meta property="og:image" content="https://mariodak.github.io/graduation/src/assets/img/og-image.jpg">
-    <!--meta(property='og:url', content='')-->
   </head>
   <body draggable="false">
     <!-- Preload-->
@@ -22,32 +19,34 @@
     <!-- Menu-->
     <div class="menu-bar">
       <div class="menu-container">
-        <div class="bg-line"></div><a class="active" href="#home">A</a><a href="#use">B</a><a href="#gallery">C</a><a href="#edit">D</a><a href="#lightroom">E</a><a href="#about">F</a><a href="#contact">G</a>
+        <div class="bg-line"></div><a class="active" href="#home">-</a><a href="#use">A</a><a href="#gallery">B</a><a href="#edit">C</a><a href="#lightroom">D</a><a href="#about">E</a><a href="#contact">F</a>
       </div>
     </div>
     <!-- Start-->
     <header class="page-section" id="home"><span class="name">Mário Ďak</span><span class="type">photography</span>
-      <div class="icon"></div>
+      <div class="icon-container">
+        <div class="icon"></div>
+      </div>
     </header>
     <div class="line-container">
       <div class="line"></div>
-      <div class="menu-port page-section" id="use"></div>
+      <div id="port"></div>
     </div>
-    <div class="title-container">
-      <p>Čo používam?</p>
-    </div>
-    <div class="a-container page-section" id="use">
-      <div class="container">
-        <div class="image-container"><img alt="neexistuje" src="assets/img/dslr_canon.png"></div>
-        <div class="info-container"><span class="title">Canon<span class="model">100D</span></span><br><span class="info">- CMOS 18Mpx DIGIC5<br>- 3" LCD<br>- FHD video</span></div>
-      </div><br>
-      <div class="container">
-        <div class="image-container"><img alt="neexistuje" src="assets/img/50mm_canon.png"></div>
-        <div class="info-container"><span class="title">Hlavný<span class="model">Objektív</span></span><br><span class="info">- Canon<br>- f/1.8<br>- 50mm<br>- rotačný motorček</span></div>
-      </div><br>
-      <div class="container">
-        <div class="image-container"><img alt="neexistuje" src="assets/img/18_55mm_canon.png"></div>
-        <div class="info-container"><span class="title">Kitový<span class="model">objektív</span></span><br><span class="info">- Canon<br>- f/3.5 - f/5.6<br>- 18-55mm<br>- bez motorčeku</span></div>
+    <div class="page-section" id="use">
+      <div class="title-container"><span class="bg">A</span><span class="fg">Výbava</span></div>
+      <div class="a-container">
+        <div class="container">
+          <div class="image-container"><img alt="neexistuje" src="assets/img/dslr_canon.png"></div>
+          <div class="info-container"><span class="title">Canon<span class="model">100D</span></span><br><span class="info">- CMOS 18Mpx DIGIC5<br>- 3" LCD<br>- FHD video</span></div>
+        </div><br>
+        <div class="container">
+          <div class="image-container"><img alt="neexistuje" src="assets/img/50mm_canon.png"></div>
+          <div class="info-container"><span class="title">Hlavný<span class="model">Objektív</span></span><br><span class="info">- Canon<br>- f/1.8<br>- 50mm<br>- rotačný motorček</span></div>
+        </div><br>
+        <div class="container">
+          <div class="image-container"><img alt="neexistuje" src="assets/img/18_55mm_canon.png"></div>
+          <div class="info-container"><span class="title">Kitový<span class="model">objektív</span></span><br><span class="info">- Canon<br>- f/3.5 - f/5.6<br>- 18-55mm<br>- bez motorčeku</span></div>
+        </div>
       </div>
     </div>
     <div class="line-container">
@@ -55,9 +54,7 @@
       <div class="menu-port"></div>
     </div>
     <div class="page-section" id="gallery">
-      <div class="title-container">
-        <p>Fotografia</p>
-      </div>
+      <div class="title-container"><span class="bg">B</span><span class="fg">Fotografia</span></div>
       <!-- fullscreen image-->
       <div id="overlay">
         <div id="background"><img id="full" src="" alt=""></div>
@@ -75,12 +72,11 @@
       <div class="menu-port"></div>
     </div>
     <div class="page-section" id="edit">
-      <div class="title-container">
-        <p>Postprodukcia</p>
-      </div>
-      <div class="c-container">
-        <div class="container-bg"></div>
-        <div class="container-image"><img alt="neexistuje" src="assets/img/macbook-edit.png"></div>
+      <div class="title-container"><span class="bg">C</span><span class="fg">Postprodukcia</span></div>
+      <div class="c-container"><img class="bg" alt="neexistuje" src="assets/img/bg-macbook.jpg"><img class="fg" alt="neexistuje" src="assets/img/macbook-edit.png">
+        <div class="container-text">
+          <p>Postprodukcia fotografií je veľmi dôležitá, teda aspoň pre mňa.. Spočíva v tom, že "surové" (RAW) fotky sa nakopírujú do programu tzv. Adobe Lightroom a neskôr ich v Develop móde upravujeme. Svetlo, kontrast, farby a mnoho dalšieho!</p>
+        </div>
       </div>
     </div>
     <div class="line-container">
@@ -88,9 +84,7 @@
       <div class="menu-port"></div>
     </div>
     <div class="page-section" id="lightroom">
-      <div class="title-container">
-        <p>Úprava fotiek?</p>
-      </div>
+      <div class="title-container"><span class="bg">D</span><span class="fg">Úprava fotiek?</span></div>
       <div class="d-container">
         <div class="container-image">
           <div class="flex-container">
@@ -104,7 +98,7 @@
             <div class="flex-item"></div>
           </div>
         </div>
-        <div class="container-macs"><img alt="neexistuje" src="assets/img/mac.png"></div>
+        <div class="container-macs"></div><img class="mac" alt="neexistuje" src="assets/img/mac.png">
         <div class="title-container">
           <p class="rotate-font">Lightroom</p>
         </div>
@@ -119,9 +113,7 @@
       <div class="menu-port"></div>
     </div>
     <div class="page-section" id="about">
-      <div class="title-container">
-        <p>Kto som?</p>
-      </div>
+      <div class="title-container"><span class="bg">E</span><span class="fg">Kto som?</span></div>
       <div class="e-container">
         <div class="container-image"><img alt="neexistuje" src="assets/img/profile.jpg"></div>
         <div class="container-text">
@@ -130,7 +122,7 @@
         </div>
         <div class="container-text">
           <hr>
-          <p class="structure"><span class="main">Meno:</span><span class="sub">Mário Ďak</span><br><span class="main">Tel.č.:</span><span class="sub">+421 xxx xxx xxx</span><br><span class="main">E-mail:</span><span class="sub">e.mariodak@gmail.com</span><br><span class="main">Adresa:</span><span class="sub">družstevná, Humenné</span><br><span class="main">Firma:</span><span class="sub">MD Photography s.r.o</span><br><span class="main">Meno:</span><span class="sub">Mário Ďak</span><br></p>
+          <p class="structure"><span class="main">Meno:</span><span class="sub">Mário Ďak</span><br><span class="main">Tel.č.:</span><span class="sub">+421 xxx xxx xxx</span><br><span class="main">E-mail:</span><span class="sub">e.mariodak@gmail.com</span><br><span class="main">Adresa:</span><span class="sub">družstevná, Humenné</span><br><span class="main">Firma:</span><span class="sub">MD Photography s.r.o</span></p>
         </div>
       </div>
     </div>
@@ -139,9 +131,7 @@
       <div class="menu-port"></div>
     </div>
     <div class="page-section" id="contact">
-      <div class="title-container">
-        <p>Kontaktuj ma</p>
-      </div>
+      <div class="title-container"><span class="bg">F</span><span class="fg">Kontaktuj ma</span></div>
       <footer>
         <div class="container">
           <div class="email"><a href="mailto:e.mariodak@gmail.com">e.mariodak@gmail.com</a></div>
@@ -158,6 +148,5 @@
     <!-- Scripts-->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <!--script(type='text/javascript').-->
   </body>
 </html>
