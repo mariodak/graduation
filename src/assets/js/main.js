@@ -1,6 +1,6 @@
 "use strict";
 
-// Main JS File
+// Hlavný JS súbor
 
 // Prednáčíta stránku
 
@@ -86,7 +86,7 @@ $(function () {
         return false;
     });
 
-    // Add animations
+    // Animácie na button
 
     $('#one-anim-change').hover(function () {
         $('.one-anim-item').addClass('hover');
