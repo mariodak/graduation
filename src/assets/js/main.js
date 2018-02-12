@@ -101,7 +101,7 @@ $(function () {
     });
 });
 
-// paralax
+// Paralax full
 
 var w = $(window).width();
 var h = $(window).height();
@@ -147,13 +147,13 @@ $(window).bind('scroll', function () {
     }
 });
 
-// Parallax Background Image Create
+// Parallax
 function Createparallaxbg(parallaxImage) {
     var ParSecImg = $(parallaxImage).attr("data-image");
     $(parallaxImage).attr("style", "background-image:url(" + ParSecImg + ");");
 }
 
-// Parallax Background Image ATTR ADD
+// Parallax BG
 function parallaxbg(position, parallaxImage) {
     var currentTop = $(window).scrollTop();
     var ParSecPT = $(position).position().top;
