@@ -21,13 +21,34 @@ html(lang="sk")
         .menu-bar
             .menu-container
                 .bg-line
-                a(class="active" href="#home") -
-                a(href="#use") A
-                a(href="#gallery") B
-                a(href="#edit") C
-                a(href="#lightroom") D
-                a(href="#about") E
-                a(href="#contact") F
+                a(class="active" href="#home")
+                    span -
+                    .info-menu
+                        span Začiatok
+                a(href="#use")
+                    span A
+                    .info-menu
+                        span Výbava
+                a(href="#gallery")
+                    span B
+                    .info-menu
+                        span Fotografia
+                a(href="#edit")
+                    span C
+                    .info-menu
+                        span Postprodukcia
+                a(href="#lightroom")
+                    span D
+                    .info-menu
+                        span Úprava fotiek?
+                a(href="#about")
+                    span E
+                    .info-menu
+                        span Kto som?
+                a(href="#contact")
+                    span F
+                    .info-menu
+                        span Kontaktuj ma
         
         // Start
         header#home.page-section
@@ -36,9 +57,7 @@ html(lang="sk")
             .icon-container
                 .icon
 
-        .line-container
-            .line
-            #port
+        .line-container.parallax1(data-image='assets/img/parallax/img-1.jpg')
         #use.page-section
             .title-container
                 span.bg A
@@ -92,9 +111,7 @@ html(lang="sk")
                             | - 18-55mm
                             br
                             | - bez motorčeku
-        .line-container
-            .line
-            .menu-port
+        .line-container.parallax2(data-image='assets/img/parallax/img-2.jpg')
         #gallery.page-section
             .title-container
                 span.bg B
@@ -129,9 +146,7 @@ html(lang="sk")
                         img(class="thumbs" src="assets/img/thumbs/img-17.jpg")
                         img(class="thumbs" src="assets/img/thumbs/img-18.jpg")
 
-        .line-container
-            .line
-            .menu-port
+        .line-container.parallax3(data-image='assets/img/parallax/img-3.jpg')
         #edit.page-section
             .title-container
                 span.bg C
@@ -141,9 +156,7 @@ html(lang="sk")
                 img(alt="neexistuje" class="fg" src="assets/img/macbook-edit.png")
                 .container-text
                     p Postprodukcia fotografií je veľmi dôležitá, teda aspoň pre mňa.. Spočíva v tom, že "surové" (RAW) fotky sa nakopírujú do programu tzv. Adobe Lightroom a neskôr ich v Develop móde upravujeme. Svetlo, kontrast, farby a mnoho dalšieho!
-        .line-container
-            .line
-            .menu-port
+        .line-container.parallax4(data-image='assets/img/parallax/img-4.jpg')
         #lightroom.page-section
             .title-container
                 span.bg D
@@ -167,9 +180,7 @@ html(lang="sk")
                     p Za všetko môže tento skvelý program!
                     br
                     p Lightroom je platený produkt od spoločnosti Adobe, s ktorým dokážete upravovať fotografie a spraviť z nich niečo neuveriteľné..
-        .line-container
-            .line
-            .menu-port
+        .line-container.parallax5(data-image='assets/img/parallax/img-5.jpg')
         #about.page-section
             .title-container
                 span.bg E
@@ -199,9 +210,7 @@ html(lang="sk")
                         span.main Firma:
                         span.sub MD Photography s.r.o
 
-        .line-container
-            .line
-            .menu-port
+        .line-container.parallax6(data-image='assets/img/parallax/img-6.jpg')
         #contact.page-section
             .title-container
                 span.bg F

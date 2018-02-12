@@ -101,8 +101,69 @@ $(function () {
     });
 });
 
-// Zobrazí element po scrolnutí
+// paralax
 
+var w = $(window).width();
+var h = $(window).height();
+
+if ($(".line-container").hasClass("parallax1")) {
+    Createparallaxbg(".parallax1");
+}
+if ($(".line-container").hasClass("parallax2")) {
+    Createparallaxbg(".parallax2");
+}
+if ($(".line-container").hasClass("parallax3")) {
+    Createparallaxbg(".parallax3");
+}
+if ($(".line-container").hasClass("parallax4")) {
+    Createparallaxbg(".parallax4");
+}
+if ($(".line-container").hasClass("parallax5")) {
+    Createparallaxbg(".parallax5");
+}
+if ($(".line-container").hasClass("parallax6")) {
+    Createparallaxbg(".parallax6");
+}
+
+$(window).bind('scroll', function () {
+
+    if ($(".line-container").hasClass("parallax1")) {
+        parallaxbg(".parallax1", ".parallax1");
+    }
+    if ($(".line-container").hasClass("parallax2")) {
+        parallaxbg(".parallax2", ".parallax2");
+    }
+    if ($(".line-container").hasClass("parallax3")) {
+        parallaxbg(".parallax3", ".parallax3");
+    }
+    if ($(".line-container").hasClass("parallax4")) {
+        parallaxbg(".parallax4", ".parallax4");
+    }
+    if ($(".line-container").hasClass("parallax5")) {
+        parallaxbg(".parallax5", ".parallax5");
+    }
+    if ($(".line-container").hasClass("parallax6")) {
+        parallaxbg(".parallax6", ".parallax6");
+    }
+});
+
+// Parallax Background Image Create
+function Createparallaxbg(parallaxImage) {
+    var ParSecImg = $(parallaxImage).attr("data-image");
+    $(parallaxImage).attr("style", "background-image:url(" + ParSecImg + ");");
+}
+
+// Parallax Background Image ATTR ADD
+function parallaxbg(position, parallaxImage) {
+    var currentTop = $(window).scrollTop();
+    var ParSecPT = $(position).position().top;
+    if (currentTop > ParSecPT - h) {
+
+        $(parallaxImage).css({
+            "background-position": "0 " + ((currentTop - ParSecPT) / 2.5 - h / 5) + "px"
+        });
+    }
+}
 
 // Blokuje Zoom na prehliadačoch
 document.addEventListener('touchmove', function (event) {
